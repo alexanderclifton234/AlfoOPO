@@ -21,8 +21,6 @@ func dirChecksum(dirPath string) (string, error) {
 
 	return checksum, nil
 }
-
-func cleanDirForChecksum(dirPath string) error {
 	if err := os.RemoveAll(path.Join(dirPath, ".git")); err != nil {
 		return fmt.Errorf("error cleaning up .git directory")
 	}
